@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+.profileCard {
+    position: relative;
+    min-height: 300px;
+    width: 500px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin: 150px auto;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: solid 6px rgb(161, 132, 230);
+    img{
+        width: 100%;
+        border-radius: 100%;
+        filter: grayscale(100%);
+    }
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(161, 132, 230);
+}
+
+.status {
+    color: #837f7f;
+}
+
+.button {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgb(161, 132, 230) ;
+}
