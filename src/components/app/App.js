@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 // =======
 import classes from './App.module.css'
 // ------
@@ -11,22 +11,19 @@ import Profile from '../profile/Profile';
 import Dialogs from '../Dialogs/Dialogs';
 
 
-const App = () => {
+const App = (props) => {
     return ( 
-        <BrowserRouter>
         <div className={classes.app}>
             <Header/>
             <Navbar/> 
             <div className={classes.appContent}>
                 <Switch>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path='/dialogs' component={Dialogs}/>
+                    <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch}/>}/>
                     <Route component={PageNotFound}/>
                 </Switch> 
             </div>
-        </div>
-        </BrowserRouter>
-        
+        </div>       
      );
 }
  

@@ -7,6 +7,15 @@
     color: white;
 }
 
-.item.active {
+.item .active {
+    color: grey;
+}
+
+.item a {
+    text-decoration: none;
+    color: white;
+}
+
+a.activeLink {
     color: grey;
 }
